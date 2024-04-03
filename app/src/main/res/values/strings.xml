@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppProFoot</string>
+    <string name="app_name">ProFoot</string>
     <string name="txt_titulo">ProFoot</string>
     <string name="txt_button_novo_jogo">Novo jogo</string>
     <string name="txt_button_carregar_jogo">Carregar Jogo</string>

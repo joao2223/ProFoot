@@ -4,18 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
     tools:context=".view.MainActivity"
+    android:background="@drawable/fundoapp"
     android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="160dp"
+            >
 
             <TextView
                 android:id="@+id/txtTitulo"
@@ -35,19 +38,25 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_button_novo_jogo"
                 android:layout_marginBottom="8dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
                 />
             <Button
                 android:id="@+id/btnCarregarJogo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_button_carregar_jogo"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
                 android:layout_marginBottom="8dp"
                 />
             <Button
                 android:id="@+id/btnEditarEquipes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_button_carregar_jogo"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:text="@string/txt_button_editor_equipes"
                 android:layout_marginBottom="8dp"
                 />
         </LinearLayout>
