@@ -42,7 +42,6 @@ public class TimesDB extends SQLiteOpenHelper {
                 "jogador INTEGER)";
 
         db.execSQL(sqlTabelaTimes);
-        // Não é mais necessário chamar adicionarTimes() aqui
     }
 
     @Override
@@ -50,29 +49,32 @@ public class TimesDB extends SQLiteOpenHelper {
     }
 
     private void adicionarTimes() {
-        String sqlInserirTimes = "INSERT INTO Times (nomeDoTime, localizacao, divisao, libertadores, sulamericana, jogador) VALUES " +
-                "('Athletico-PR', 1, 1, 0, 0, 0), " +
-                "('Atlético-GO', 1, 1, 0, 0, 0), " +
-                "('Atlético-MG', 1, 1, 0, 0, 0), " +
-                "('Bahia', 1, 1, 0, 0, 0), " +
-                "('Botafogo', 1, 1, 0, 0, 0), " +
-                "('Bragantino', 1, 1, 0, 0, 0), " +
-                "('Corinthians', 1, 1, 0, 0, 0), " +
-                "('Criciúma', 1, 1, 0, 0, 0), " +
-                "('Cruzeiro', 1, 1, 0, 0, 0), " +
-                "('Cuiabá', 1, 1, 0, 0, 0), " +
-                "('Flamengo', 1, 1, 0, 0, 0), " +
-                "('Fluminense', 1, 1, 0, 0, 0), " +
-                "('Fortaleza', 1, 1, 0, 0, 0), " +
-                "('Grêmio', 1, 1, 0, 0, 0), " +
-                "('Internacional', 1, 1, 0, 0, 0), " +
-                "('Juventude', 1, 1, 0, 0, 0), " +
-                "('Palmeiras', 1, 1, 0, 0, 0), " +
-                "('São Paulo', 1, 1, 0, 0, 0), " +
-                "('Vasco', 1, 1, 0, 0, 0), " +
-                "('Vitória', 1, 1, 0, 0, 0)";
+        if(listarTimes().size() == 0){
+            String sqlInserirTimes = "INSERT INTO Times (nomeDoTime, localizacao, divisao, libertadores, sulamericana, jogador) VALUES " +
+                    "('Athletico-PR', 1, 1, 0, 0, 0), " +
+                    "('Atlético-GO', 1, 1, 0, 0, 0), " +
+                    "('Atlético-MG', 1, 1, 0, 0, 0), " +
+                    "('Bahia', 1, 1, 0, 0, 0), " +
+                    "('Botafogo', 1, 1, 0, 0, 0), " +
+                    "('Bragantino', 1, 1, 0, 0, 0), " +
+                    "('Corinthians', 1, 1, 0, 0, 0), " +
+                    "('Criciúma', 1, 1, 0, 0, 0), " +
+                    "('Cruzeiro', 1, 1, 0, 0, 0), " +
+                    "('Cuiabá', 1, 1, 0, 0, 0), " +
+                    "('Flamengo', 1, 1, 0, 0, 0), " +
+                    "('Fluminense', 1, 1, 0, 0, 0), " +
+                    "('Fortaleza', 1, 1, 0, 0, 0), " +
+                    "('Grêmio', 1, 1, 0, 0, 0), " +
+                    "('Internacional', 1, 1, 0, 0, 0), " +
+                    "('Juventude', 1, 1, 0, 0, 0), " +
+                    "('Palmeiras', 1, 1, 0, 0, 0), " +
+                    "('São Paulo', 1, 1, 0, 0, 0), " +
+                    "('Vasco', 1, 1, 0, 0, 0), " +
+                    "('Vitória', 1, 1, 0, 0, 0)";
 
-        db.execSQL(sqlInserirTimes);
+            db.execSQL(sqlInserirTimes);
+        }
+
     }
 
     public List<Time> listarTimes () {

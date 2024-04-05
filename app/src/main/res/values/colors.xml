@@ -2,5 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#808080</color>
+    <color name="darkGray">#565656</color>>
     <color name="botao">#60BEE5</color>
 </resources>

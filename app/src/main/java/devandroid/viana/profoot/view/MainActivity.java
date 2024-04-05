@@ -1,6 +1,7 @@
 package devandroid.viana.profoot.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnNovoJogo;
     Button btnCarregarJogo;
     Button btnEditarEquipes;
+    FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
